@@ -1,4 +1,4 @@
-### 🚀 Microservico-Api10-CQRS
+### 🚀 Microservicos-Api10-CQRS
 
 Exemplo de criação de Arquitetura distribuida CQRS utilizando banco de dados MongoDB e Postgres.
 
