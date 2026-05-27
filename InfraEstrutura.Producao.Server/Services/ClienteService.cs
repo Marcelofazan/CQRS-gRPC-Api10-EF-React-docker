@@ -1,4 +1,4 @@
-﻿using InfraEstrutura.Producao.DataModels;
+using InfraEstrutura.Producao.DataModels;
 using InfraEstrutura.Producao.DataModels.Data;
 using Grpc.Core;
 using Microsoft.EntityFrameworkCore;
@@ -36,7 +36,7 @@ namespace InfraEstrutura.Producao.Server.Services
 
                 };
 
-                _context.Lancamentos.Add(lancamento);
+                _context.Clientes.Add(lancamento);
                 await _context.SaveChangesAsync();
 
 
@@ -58,7 +58,7 @@ namespace InfraEstrutura.Producao.Server.Services
         {
             try
             {
-                var lancamentoExistente = await _context.Lancamentos
+                var lancamentoExistente = await _context.Clientes
                                                 .AsNoTracking()
                                                 .FirstOrDefaultAsync(x => x.Id == Guid.Parse(request.Id));
 
@@ -81,7 +81,7 @@ namespace InfraEstrutura.Producao.Server.Services
                     DataCadastro = request.Registrationdate
                 };
 
-                _context.Lancamentos.Update(lancamentoAtualizado);
+                _context.Clientes.Update(lancamentoAtualizado);
                 await _context.SaveChangesAsync();
 
                 return new LaunchResponse
@@ -105,7 +105,7 @@ namespace InfraEstrutura.Producao.Server.Services
             try
             {
 
-                var lancamentoExistente = await _context.Lancamentos.FindAsync(Guid.Parse(request.Id));
+                var lancamentoExistente = await _context.Clientes.FindAsync(Guid.Parse(request.Id));
 
                 if (lancamentoExistente == null)
                 {
@@ -116,7 +116,7 @@ namespace InfraEstrutura.Producao.Server.Services
                     };
                 }
 
-                _context.Lancamentos.Remove(lancamentoExistente);
+                _context.Clientes.Remove(lancamentoExistente);
                 await _context.SaveChangesAsync();
 
                 return new DeleteLaunchResponse
