@@ -95,6 +95,12 @@ Apagar Cliente
 ```bash 
 https://localhost:7274/api/Cliente/3fa85f64-5717-4562-b3fc-2c963f66afa6
 ```
-#### Postgres (pgAdmin)
+
+#### Executar Testes Unitários
+```bash 
+dotnet test Sistema.Producao.Testes/Sistema.Producao.Testes.csproj
+```
+
+#### ⚙️ Postgres (pgAdmin)
 Conexão com o Banco de dados 
 - Com o Servidor do **Postgres** parado em Serviços, crie uma conexão Docker Postgres para 127.0.0.1 e informe o Usuário e Senha 
