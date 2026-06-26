@@ -58,8 +58,6 @@ docker compose down
 | **gRPC** | https://localhost:7026/ | **API** |
 | **RabbitMQ** | http://localhost:15672 | **API** |
 
-RabbitMQ por padrão possui para acesso Login: **guest** **Senha: **guest** 
-
 - Registrar Cliente **https://localhost:7274/api/Cliente/create**
 ```bash 
 {
@@ -133,16 +131,15 @@ dotnet run --launch-profile https
 docker compose down         
 ```
 
-Exemplo chamada Relatório de consolidação, ele será gravado no banco de dados MongoDB
-
 #### 🧪 Executar Endpoints
-
 | Host | URL | Projeto | 
 |-----------|-----------|-----------|
 | **Server** | http://localhost:5159 | **Infraestrutura** |
 | **API** | https://localhost:7080/swagger/index.html | **API** |
 | **gRPC** | https://localhost:7237/ | **API** |
 | **RabbitMQ** | http://localhost:15672 | **API** |
+
+Relatório de consolidação, ele será consultado no banco de dados MongoDB
 
 ```bash 
 https://localhost:7080/api/Consolidacao/consolidacao?data=2026-06-26
@@ -180,6 +177,7 @@ dotnet dev-certs https --trust
 ```
 
 #### ⚙️ Configuração - RabbitMQ Conflito Portas e Logout 
+RabbitMQ por padrão possui para acesso Login: **guest** **Senha: **guest** 
 - Caso o RabbitMQ não estar atualizando, refaça o login e verifique as portas
 - Caso houver falhas na criação do Conteiner na porta do RabbitMQ execute no PowerShell executar . 
 ```bash 
