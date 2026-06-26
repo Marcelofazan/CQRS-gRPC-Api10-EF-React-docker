@@ -139,8 +139,8 @@ docker compose down
 | **gRPC** | https://localhost:7237/ | **API** |
 | **RabbitMQ** | http://localhost:15672 | **API** |
 
-- Consultar dados, ele será consultado no banco de dados MongoDB 
-**https://localhost:7080/api/Consolidacao/consolidacao?data=2026-06-26**
+Relatório de Consolidação, ele será consultado no banco de dados MongoDB 
+- Consultar dados **https://localhost:7080/api/Consolidacao/consolidacao?data=2026-06-26**
 
 #### 🧪 Executar Testes Unitários
 - Necessário ter dados, para passar todos os testes. 
