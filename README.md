@@ -183,3 +183,13 @@ O projeto ira rodar em **localhost:3000**
 dotnet dev-certs https --clean
 dotnet dev-certs https --trust
 ```
+
+#### ⚙️ Configuração - RabbitMQ
+- Caso houver falhas na criação do Conteiner na porta do RabbitMQ execute no PowerShell executar . 
+```bash 
+netstat -ano | findstr 5672
+```
+O comando vai mostrar um número no final da linha (o PID). Elimine o processo usando:
+```bash 
+taskkill /PID <NUMERO_DO_PID> /F
+```
