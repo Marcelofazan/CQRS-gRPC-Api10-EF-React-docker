@@ -145,7 +145,7 @@ docker compose down
 Relatório de Consolidação, ele será consultado no banco de dados MongoDB 
 - Consultar dados **https://localhost:7080/api/Consolidacao/consolidacao?data=2026-06-26**
 
-#### 🧪 Executar Testes Unitários
+#### 🔍 Executar Testes Unitários
 - Necessário ter dados, para passar todos os testes. 
 ```bash
 dotnet test Sistema.Reporter.Testes/Sistema.Reporter.Testes.csproj
