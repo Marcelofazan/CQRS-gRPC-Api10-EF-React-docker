@@ -87,7 +87,7 @@ docker compose down
 
 - Apagar Cliente **https://localhost:7274/api/Cliente/3fa85f64-5717-4562-b3fc-2c963f66afa6**
 
-#### 🧪 Executar Testes Unitários
+#### 🔍 Executar Testes Unitários
 ```bash 
 dotnet test Sistema.Producao.Testes/Sistema.Producao.Testes.csproj
 ```
